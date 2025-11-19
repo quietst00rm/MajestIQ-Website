@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MajestIQ | Enterprise Operations</title>
+    <meta name="description" content="Building Tomorrow's Operational Systems. Proprietary solutions for brands operating at scale." />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          container: {
+            center: true,
+            padding: '2rem',
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '1024px',
+              xl: '1400px',
+              '2xl': '1700px',
+            },
+          },
+          extend: {
+            colors: {
+              gold: {
+                light: '#FFD700',
+                dark: '#D4AF37',
+                muted: '#B8860B'
+              },
+              charcoal: '#0A0A0A',
+              secondary: '#A3A3A3',
+              secondaryLight: '#404040'
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Space Grotesk', 'sans-serif'],
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Desktop Scaling */
+      @media (min-width: 1024px) {
+        html {
+          font-size: 18px;
+        }
+      }
+
+      @media (min-width: 1600px) {
+        html {
+          font-size: 20px;
+        }
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+        /* Custom Gold Cursor */
+        cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 3.5L22 19L13.5 20.5L18 29.5L14.5 31L10 22L4 28V3.5Z' fill='%23FFD700' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"), auto;
+      }
+      
+      /* Ensure interactive elements keep the pointer cursor (or custom cursor) */
+      a, button, [role="button"], input, textarea, select, .cursor-pointer {
+        cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 3.5L22 19L13.5 20.5L18 29.5L14.5 31L10 22L4 28V3.5Z' fill='%23FFD700' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"), pointer;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-black dark:bg-charcoal dark:text-white antialiased selection:bg-gold-light selection:text-black overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
