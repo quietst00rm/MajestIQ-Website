@@ -1,119 +1,239 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MajestIQ | Enterprise Operations</title>
-    <meta name="description" content="Building Tomorrow's Operational Systems. Proprietary solutions for brands operating at scale." />
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          container: {
-            center: true,
-            padding: '2rem',
-            screens: {
-              sm: '640px',
-              md: '768px',
-              lg: '1024px',
-              xl: '1400px',
-              '2xl': '1700px',
-            },
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>MajestIQ | Proprietary AI Systems for Enterprise Operations</title>
+  <meta name="title" content="MajestIQ | Proprietary AI Systems for Enterprise Operations" />
+  <meta name="description" content="Building tomorrow's operational systems. Proprietary AI and automation solutions for enterprise brands operating at scale. Tested in our operations first." />
+  <meta name="keywords" content="enterprise AI, proprietary automation, operational systems, Amazon marketplace solutions, enterprise operations, AI deployment, custom automation, operational AI" />
+  <meta name="author" content="MajestIQ" />
+  <meta name="language" content="en-US" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.majestiq.io" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.majestiq.io" />
+  <meta property="og:site_name" content="MajestIQ" />
+  <meta property="og:title" content="MajestIQ | Proprietary AI Systems for Enterprise Operations" />
+  <meta property="og:description" content="Building tomorrow's operational systems. Proprietary solutions for enterprise brands operating at scale." />
+  <meta property="og:image" content="https://www.majestiq.io/og-image.jpg" />
+  <meta property="og:image:secure_url" content="https://www.majestiq.io/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MajestIQ - Building Tomorrow's Operational Systems" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.majestiq.io" />
+  <meta name="twitter:title" content="MajestIQ | Proprietary AI Systems for Enterprise Operations" />
+  <meta name="twitter:description" content="Building tomorrow's operational systems. Proprietary solutions for enterprise brands operating at scale." />
+  <meta name="twitter:image" content="https://www.majestiq.io/twitter-card.jpg" />
+  <meta name="twitter:image:alt" content="MajestIQ - Building Tomorrow's Operational Systems" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon-precomposed.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="MajestIQ" />
+
+  <!-- Android/Chrome -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-TileColor" content="#000000" />
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data - Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MajestIQ",
+    "url": "https://www.majestiq.io",
+    "logo": "https://www.majestiq.io/logo.png",
+    "description": "Proprietary AI and automation systems for enterprise operations. Building tomorrow's operational systems for brands at scale.",
+    "foundingDate": "2022",
+    "foundingLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      }
+    },
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": "11-50"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/majestiq"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Enterprise Partnerships",
+      "email": "partnerships@majestiq.io"
+    }
+  }
+  </script>
+
+  <!-- Structured Data - WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "MajestIQ",
+    "url": "https://www.majestiq.io",
+    "description": "Proprietary AI systems for enterprise operations"
+  }
+  </script>
+
+  <!-- Structured Data - SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MajestIQ Enterprise Solutions",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Enterprise partnerships - contact for details"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "ratingCount": "1"
+    },
+    "description": "Proprietary AI and automation systems built for enterprise operations at scale"
+  }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        container: {
+          center: true,
+          padding: '2rem',
+          screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1400px',
+            '2xl': '1700px',
           },
-          extend: {
-            colors: {
-              gold: {
-                light: '#FFD700',
-                dark: '#D4AF37',
-                muted: '#B8860B'
-              },
-              charcoal: '#0A0A0A',
-              secondary: '#A3A3A3',
-              secondaryLight: '#404040'
+        },
+        extend: {
+          colors: {
+            gold: {
+              light: '#FFD700',
+              dark: '#D4AF37',
+              muted: '#B8860B'
             },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              heading: ['Space Grotesk', 'sans-serif'],
-            },
-            animation: {
-              'spin-slow': 'spin 12s linear infinite',
-            }
+            charcoal: '#0A0A0A',
+            secondary: '#A3A3A3',
+            secondaryLight: '#404040'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+          },
+          animation: {
+            'spin-slow': 'spin 12s linear infinite',
           }
         }
       }
-    </script>
-    <style>
-      /* Custom Scrollbar for Webkit */
-      ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-      
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    @media (min-width: 1024px) {
       html {
-        scroll-behavior: smooth;
+        font-size: 18px;
       }
+    }
+    @media (min-width: 1600px) {
+      html {
+        font-size: 20px;
+      }
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 3.5L22 19L13.5 20.5L18 29.5L14.5 31L10 22L4 28V3.5Z' fill='%23FFD700' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"), auto;
+    }
 
-      /* Desktop Scaling */
-      @media (min-width: 1024px) {
-        html {
-          font-size: 18px;
-        }
-      }
+    a, button, [role="button"], input, textarea, select, .cursor-pointer {
+      cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 3.5L22 19L13.5 20.5L18 29.5L14.5 31L10 22L4 28V3.5Z' fill='%23FFD700' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"), pointer;
+    }
+  </style>
 
-      @media (min-width: 1600px) {
-        html {
-          font-size: 20px;
-        }
-      }
-
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-
-      body {
-        transition: background-color 0.3s ease, color 0.3s ease;
-        /* Custom Gold Cursor */
-        cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 3.5L22 19L13.5 20.5L18 29.5L14.5 31L10 22L4 28V3.5Z' fill='%23FFD700' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"), auto;
-      }
-      
-      /* Ensure interactive elements keep the pointer cursor (or custom cursor) */
-      a, button, [role="button"], input, textarea, select, .cursor-pointer {
-        cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 3.5L22 19L13.5 20.5L18 29.5L14.5 31L10 22L4 28V3.5Z' fill='%23FFD700' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"), pointer;
-      }
-    </style>
   <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.2.0",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+      "react/": "https://aistudiocdn.com/react@^19.2.0/",
+      "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+      "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+    }
   }
-}
-</script>
+  </script>
 </head>
   <body class="bg-white text-black dark:bg-charcoal dark:text-white antialiased selection:bg-gold-light selection:text-black overflow-x-hidden">
     <div id="root"></div>
