@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ThemeProvider } from '../context/ThemeContext';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -11,6 +11,11 @@ import Background3D from '../components/visuals/Background3D';
 import CustomCursor from '../components/visuals/CustomCursor';
 
 const App: React.FC = () => {
+  // Scroll to top on page load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
