@@ -69,15 +69,20 @@ const Contact: React.FC = () => {
   const submitForm = async () => {
     setStatus('submitting');
 
+    const minDelay = new Promise(resolve => setTimeout(resolve, 4000));
+
     try {
-      const response = await fetch('https://formspree.io/f/xkglgndw', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
+      const [response] = await Promise.all([
+        fetch('https://formspree.io/f/xkglgndw', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        }),
+        minDelay
+      ]);
 
       if (response.ok) {
         setStatus('success');
@@ -85,6 +90,7 @@ const Contact: React.FC = () => {
         setStatus('error');
       }
     } catch {
+      await minDelay;
       setStatus('error');
     }
   };
