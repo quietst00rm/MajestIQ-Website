@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../context/ThemeContext';
-import { ArrowRight, CornerDownLeft, Check } from 'lucide-react';
+import { ArrowRight, CornerDownLeft, Check, AlertCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const { theme } = useTheme();
@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
     company: '',
     message: ''
   });
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [error, setError] = useState(false);
   
   const inputRef = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
@@ -66,11 +66,27 @@ const Contact: React.FC = () => {
     }
   };
 
-  const submitForm = () => {
+  const submitForm = async () => {
     setStatus('submitting');
-    setTimeout(() => {
-      setStatus('success');
-    }, 4000);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xkglgndw', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -323,6 +339,36 @@ const Contact: React.FC = () => {
                   ${theme === 'dark' ? 'text-gold-light' : 'text-gold-dark'}`}>
                   Your message has been delivered, Earthling.
                 </p>
+              </motion.div>
+            )}
+
+            {status === 'error' && (
+              <motion.div
+                key="error"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center"
+              >
+                <div className={`inline-flex p-8 rounded-full mb-8 bg-red-500/20 text-red-500`}>
+                  <AlertCircle size={64} strokeWidth={1.5} />
+                </div>
+                <h3 className={`text-2xl md:text-4xl font-heading font-bold mb-4 tracking-tight
+                  ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
+                  Transmission Failed
+                </h3>
+                <p className={`text-lg md:text-xl font-mono mb-8
+                  ${theme === 'dark' ? 'text-secondary' : 'text-secondaryLight'}`}>
+                  Signal interrupted. Please try again.
+                </p>
+                <button
+                  onClick={() => setStatus('idle')}
+                  className={`px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 hover:scale-105
+                    ${theme === 'dark'
+                      ? 'bg-gold-light text-black hover:bg-white'
+                      : 'bg-gold-dark text-white hover:bg-black'}`}
+                >
+                  Retry Transmission
+                </button>
               </motion.div>
             )}
           </AnimatePresence>
